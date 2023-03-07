@@ -29,7 +29,21 @@ public class IfElseStatementTheme{
         }else if(nameFirstLetter.charAt(0) == 'I'){
             System.out.println("Все еще не Андрей");
         }else{
-            System.out.println("Возможно что тебя зовут Андрей)");
+            System.out.println("Возможно что тебя зовут Андрей)\n");
+        }
+
+        System.out.println("2.Поиск max и min числа");
+        int numOne = 70;
+        int numTwo = 70;
+        System.out.printf("Первое число - %d \nВторое число - %d\n", numOne, numTwo);
+        if (numOne > numTwo) {
+            System.out.printf("Число %d - max\n", numOne);
+            System.out.printf("Число %d - min\n", numTwo);
+        }else if (numOne < numTwo) {
+            System.out.printf("Число %d - min\n", numOne);
+            System.out.printf("Число %d - max\n", numTwo);
+        }else{
+            System.out.println("Оба числа равны");
         }
     }
 }
