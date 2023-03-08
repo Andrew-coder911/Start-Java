@@ -43,7 +43,7 @@ public class IfElseStatementTheme{
             System.out.printf("Число %d - min\n", numOne);
             System.out.printf("Число %d - max\n", numTwo);
         }else{
-            System.out.println("Оба числа равны");
+            /System.out.println("Оба числа равны");
         }
     }
 }
