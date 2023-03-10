@@ -13,10 +13,10 @@ public class VariablesTheme {
         boolean itWorking = true;
         
         System.out.println("Кол-во ядер в моем ПК: " + coreAmount);
-        System.out.println("Кол-во мониторов в моем ПК: " + monitorAmount);
+        System.out.println("Кол-во мониторов в моем ПК: " + monitorAmount + " шт.");
         System.out.printf("Объем оперативной памяти в Мб: %d Mb\n", ramMBites);
-        System.out.printf("Тот же объем в байтах: %d bites\n", ramBites);
-        System.out.println("Частота процессора моего ПК: " + frequencyCpu);
+        System.out.printf("Тот же объем в байтах: %d B\n", ramBites);
+        System.out.println("Частота процессора моего ПК: " + frequencyCpu + " Hz");
         System.out.println("Десять чисел после запятой числа ПИ: " + pi);
         System.out.printf("Первая буква моего имени: %c\n", nameLetter);
         System.out.println("Сейчас компьютер включен? - " + itWorking);
@@ -49,20 +49,20 @@ public class VariablesTheme {
         long longMax = 9223372036854775807L;
         
         System.out.println("Bite первоначальное значение: " + byteMax);
-        System.out.println("Bite значение после инкремента: " + byteMax++);
-        System.out.println("Bite значение после декремента " + byteMax--);
+        System.out.println("Bite значение после инкремента: " + ++byteMax);
+        System.out.println("Bite значение после декремента " + --byteMax);
 
         System.out.println("Short первоначальное значение: " + shortMax);
-        System.out.println("Short значение после инкремента: " + shortMax++);
-        System.out.println("Short значение после декремента " + shortMax--);
+        System.out.println("Short значение после инкремента: " + ++shortMax);
+        System.out.println("Short значение после декремента " + --shortMax);
 
         System.out.println("Integer первоначальное значение: " + intMax);
-        System.out.println("Integer значение после инкремента: " + intMax++);
-        System.out.println("Integer значение после декремента " + intMax--);
+        System.out.println("Integer значение после инкремента: " + ++intMax);
+        System.out.println("Integer значение после декремента " + --intMax);
 
         System.out.println("Long первоначальное значение: " + longMax);
-        System.out.println("Long значение после инкремента: " + longMax++);
-        System.out.println("Long значение после декремента " + longMax--);
+        System.out.println("Long значение после инкремента: " + ++longMax);
+        System.out.println("Long значение после декремента " + --longMax);
 
         System.out.println("\n5.Перестановка значений переменных\n");
 
@@ -80,14 +80,14 @@ public class VariablesTheme {
         System.out.printf("Начальные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
         num1 += num2;
         num2 = num1 - num2;
-        num1 = num1 - num2;
+        num1 -= num2;
         System.out.printf("Измененные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
 
         System.out.println("Способ с помощью с помощью побитовой операции ^.");
         System.out.printf("Начальные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
-        num1 = num1 ^ num2;
+        num1 ^= num2;
         num2 = num1 ^ num2;
-        num1 = num1 ^ num2;
+        num1 ^= num2;
         System.out.printf("Измененные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
 
         System.out.println("\n6.Вывод символов и их кодов\n");
@@ -98,11 +98,11 @@ public class VariablesTheme {
         char caret = '^';
         char underscore = '_';
         
-        System.out.printf("%d %c\n", (int)numberSign, numberSign);
-        System.out.printf("%d %c\n", (int)ampersand, ampersand);
-        System.out.printf("%d %c\n", (int)atSymbol, atSymbol);
-        System.out.printf("%d %c\n", (int)caret, caret);
-        System.out.printf("%d %c\n", (int)underscore, underscore);
+        System.out.printf("%d %c\n", (int) numberSign, numberSign);
+        System.out.printf("%d %c\n", (int) ampersand, ampersand);
+        System.out.printf("%d %c\n", (int) atSymbol, atSymbol);
+        System.out.printf("%d %c\n", (int) caret, caret);
+        System.out.printf("%d %c\n", (int) underscore, underscore);
 
         System.out.println("\n7.Вывод в консоль ASCII-арт Дюка\n");
 
