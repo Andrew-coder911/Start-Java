@@ -122,8 +122,8 @@ public class VariablesTheme {
 
         int num = 123;
         int hundreds = num / 100;
-        int tens = (num - hundreds * 100) / 10;
-        int ones = num - hundreds * 100 - tens * 10;
+        int tens = (num % 100) / 10;
+        int ones = (num % 100) % 20;
         
         System.out.println("Число N содержит:");
         System.out.printf("%d сотен\n", hundreds);
@@ -134,10 +134,10 @@ public class VariablesTheme {
 
         System.out.println("\n9.Вывод времени\n");
 
-        int seconds = 86399;
-        int hours = (seconds / 60) /60;
-        int minutes = seconds % 60;        
-        int secondsRemind = seconds % 86340;        
-        System.out.printf("%d:%d:%d", hours, minutes, secondsRemind);
+        int time = 86399;
+        int hours = (time / 60) /60;
+        int minutes = (time / 60) % 60;
+        int seconds = time % 60;
+        System.out.printf("%d:%d:%d", hours, minutes, seconds);
     }
 }
