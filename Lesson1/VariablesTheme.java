@@ -10,16 +10,16 @@ public class VariablesTheme {
         float frequencyCpu = 3.6f;
         double pi = 3.1415926535;
         char nameLetter = 'A';
-        boolean itWorking = true;
+        boolean working = true;
         
-        System.out.println("Кол-во ядер в моем ПК: " + coreAmount);
+        System.out.println("Кол-во ядер в моем ПК: " + coreAmount + " шт.");
         System.out.println("Кол-во мониторов в моем ПК: " + monitorAmount + " шт.");
         System.out.printf("Объем оперативной памяти в Мб: %d Mb\n", ramMBites);
         System.out.printf("Тот же объем в байтах: %d B\n", ramBites);
         System.out.println("Частота процессора моего ПК: " + frequencyCpu + " Hz");
         System.out.println("Десять чисел после запятой числа ПИ: " + pi);
         System.out.printf("Первая буква моего имени: %c\n", nameLetter);
-        System.out.println("Сейчас компьютер включен? - " + itWorking);
+        System.out.println("Сейчас компьютер включен? - " + working);
 
         System.out.println("\n2.Расчет стоимости товара со скидкой\n");
 
@@ -123,7 +123,7 @@ public class VariablesTheme {
         int num = 123;
         int hundreds = num / 100;
         int tens = (num % 100) / 10;
-        int ones = (num % 100) % 20;
+        int ones = num % 10;
         
         System.out.println("Число N содержит:");
         System.out.printf("%d сотен\n", hundreds);
