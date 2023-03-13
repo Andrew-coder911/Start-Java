@@ -14,8 +14,8 @@ public class VariablesTheme {
         
         System.out.println("Кол-во ядер в моем ПК: " + coreAmount + " шт.");
         System.out.println("Кол-во мониторов в моем ПК: " + monitorAmount + " шт.");
-        System.out.printf("Объем оперативной памяти в Мб: %d Mb\n", ramMBites);
-        System.out.printf("Тот же объем в байтах: %d B\n", ramBites);
+        System.out.printf("Объем оперативной памяти в Мбит: %d Mbit\n", ramMBites);
+        System.out.printf("Тот же объем в байтах: %d bit\n", ramBites);
         System.out.println("Частота процессора моего ПК: " + frequencyCpu + " Hz");
         System.out.println("Десять чисел после запятой числа ПИ: " + pi);
         System.out.printf("Первая буква моего имени: %c\n", nameLetter);
