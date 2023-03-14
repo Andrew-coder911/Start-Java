@@ -166,7 +166,7 @@ public class IfElseStatementTheme {
         int monthRent = 5000;
         int midSell = 13000;
         int costPrice = 9000;
-        int income = (midSell * 12) - (costPrice * 12) - (monthRent * 12);
+        int income = (midSell - costPrice - monthRent) * 12;
         char sign = 0;
         if (income > 0)
             sign = '+';
