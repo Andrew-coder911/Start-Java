@@ -18,27 +18,38 @@ class CyclesTheme{
                 sumEven, sumOdd);
 
         System.out.println("\n2.Вывод чисел в интервале (min и max) в порядке убывания");
-        int numOne = 10;
-        int numTwo = 5;
-        int numThree = -1;
+        int num1 = 10;
+        int num2 = 5;
+        int num3 = -1;
         int max = 0;
         int min = 0;
-        if (numOne > numTwo && numOne > numThree) {
-            max = numOne;
-        }else if (numTwo > numOne && numTwo > numThree) {
-            max = numTwo;
+        if (num1 > num2 && num1 > num3) {
+            max = num1;
+        }else if (num2 > num1 && num2 > num3) {
+            max = num2;
         }else{
-            max = numThree;
+            max = num3;
         }
-        if (numOne < numTwo && numOne < numThree) {
-            min = numOne;
-        }else if (numTwo < numOne && numTwo < numThree) {
-            min = numTwo;
+        if (num1 < num2 && num1 < num3) {
+            min = num1;
+        }else if (num2 < num1 && num2 < num3) {
+            min = num2;
         }else{
-            min = numThree;
+            min = num3;
         }
-        for (int i = ++min; i < max; i++) {
+        System.out.printf("Числа в интервале (%d, %d) в порядке убывания\n", min, max);
+        for (int i = --max; i > min; i--) {
             System.out.printf("%d", i);
+        }
+
+        System.out.println("\n\n3.Вывод реверсивного числа и суммы его цифр");
+        num1 = 1234;
+        int num1Thousands
+        int num1Hundreds;
+        int num1Tens;
+        int num1Ones;
+        while (num1 % 10 != num1Ones){
+            
         }
     }
 }
