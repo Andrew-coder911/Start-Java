@@ -48,20 +48,23 @@ public class IfElseStatementTheme {
 
         System.out.println("\n3.Проверка числа");
         int num = -3;
+        String evenOdd = "";
+        String negativePositive = "";
         if (num != 0) {
             if (num % 2 == 0) {
-                System.out.println("Число " + num + " - четное.");
+                evenOdd = " четное";
             } else {
-                System.out.println("Число " + num + " - нечетное.");
+                evenOdd = " нечетное";
             }
 
             if (num > 0) {
-                System.out.println("Число " + num + " - положительное.");
+                negativePositive = " положительное";
             } else {
-                System.out.println("Число " + num + " - отрицательное.");
+                negativePositive = " отрицательное";
             }
+            System.out.println("Число " + evenOdd + negativePositive);
         } else {
-            System.out.println("Число равно:" + num);
+            System.out.println("Число ноль");
         }
 
         System.out.println("\n4.Поиск одинаковых цифр в числах");
