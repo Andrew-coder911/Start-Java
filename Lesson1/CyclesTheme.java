@@ -113,5 +113,131 @@ class CyclesTheme{
         }
         System.out.println("Число " + numBefore + " содержит " + countTwo + evenOdd
                  + " количество двоек");
+
+        System.out.println("\n6.Отображение фигур в консоли");
+
+        for (i = 0; i <= 5; i++) {
+            for (int j = 0; j <= 10; j++) {
+                System.out.printf("*");
+            }
+            System.out.print("\n");
+        }
+
+        i = 5;
+        while (i >= 1){
+            int j = 1;
+            while (j <= i){
+                System.out.print("#");
+                j++;
+            }
+            System.out.print("\n");
+            i--;
+        }
+        
+        num1 = 5;
+        i = 1;
+        int j = 1;
+        do {
+            num2 = 0;
+            do {
+                System.out.print("$");
+                num2++;
+            } while (num2 < i);
+            System.out.print("\n");
+            if(j < 3){
+                i++;
+            } else if (j >= 3) {
+                i--;
+            }
+            j++;
+            num1--;
+        } while (num1 > 0);
+
+        System.out.println("\n7.Отображение ASCII-символов");
+        char symbol = 0;
+        for (i = 0; i <= 127; i++) {
+            if (i == 0) {
+                System.out.printf("%5s%5s%n", "Dec", "Char");
+            } else if (i % 2 != 0 && i <= 47) {
+                symbol = (char) i;
+                if (i == 29) {
+                    System.out.printf("%6d", i);
+                    System.out.printf("%6c%n", symbol);
+                }
+                System.out.printf("%5d", i);
+                System.out.printf("%5c%n", symbol);
+            } else if (i % 2 == 0 && i >= 97 && i <= 122) {
+                symbol = (char) i;
+                System.out.printf("%5d", i);
+                System.out.printf("%5c%n", symbol);
+            }
+        }
+
+        System.out.println("\n8.Проверка, является ли число палиндромом");
+        num1 = 1234321;
+        int startNum = num1;
+        int polindromNum = 0;
+        while (num1 != 0) {
+            i = num1 % 10;
+            polindromNum = polindromNum * 10 + i;
+            num1 /= 10;
+        }
+        if (startNum == polindromNum) {
+            System.out.printf("Число %d является палиндромом\n", startNum);
+        } else {
+            System.out.printf("Число %d не является палиндромом\n", startNum);
+        }
+
+        System.out.println("\n9.Определение, является ли число счастливым");
+        num1 = 123321;
+        startNum = num1;
+        count = 0;
+        num1Thousands = 0;
+        num1Hundreds = 0;
+        int sumStart = 0;
+        int sumEnd = 0;
+        while (num1 != 0) {
+            i = num1 % 10;
+            if (count < 3) {
+                num1Thousands = num1Thousands * 10 + i;
+                sumEnd += i;
+            } else {
+                num1Hundreds = num1Hundreds * 10 + i;
+                sumStart += i;
+            }
+            count++;
+            num1 /= 10;
+        }
+        System.out.printf("Сумма цифр %d = %d\n", num1Thousands, sumEnd);
+        System.out.printf("Сумма цифр %d = %d\n", num1Hundreds, sumStart);
+        if (sumStart == sumEnd) {
+            System.out.println("Число является счастливым");
+        } else {
+            System.out.println("Число не является счастливым");
+        }
+
+        System.out.println("\n10.Вывод таблицы умножения Пифагора");
+        count = 0;
+        for (i = 1; i < 10; i++) {
+            if (i == 1) {
+                System.out.print("   ");
+            } else if (i == 2) {
+                while (count < 9) {
+                    System.out.print("___");
+                    count++;
+                }
+                System.out.print("_");
+                System.out.println("");
+            }
+            for (j = 1; j < 10; j++) {
+                if (i * j != 1) {
+                    System.out.printf("%3d", i * j);
+                }
+                if (i * j == i) {
+                    System.out.print("|");
+                }
+            }
+            System.out.println("");
+        }
     }
 }
