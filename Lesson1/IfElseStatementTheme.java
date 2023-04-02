@@ -47,7 +47,7 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n3.Проверка числа");
-        int num = -3;
+        int num = 0;
         String evenOdd = "";
         String negativePositive = "";
         if (num != 0) {
@@ -64,7 +64,7 @@ public class IfElseStatementTheme {
             }
             System.out.println("Число " + evenOdd + negativePositive);
         } else {
-            System.out.println("Число ноль");
+            System.out.println("Число " + num);
         }
 
         System.out.println("\n4.Поиск одинаковых цифр в числах");
@@ -118,14 +118,14 @@ public class IfElseStatementTheme {
 
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
         int deposit = 300000;
-        float sum = 0;
-        float percent = 0.1f;
         System.out.println("Сумма вклада: " + deposit);
+        float percent = 0.1f;
         if (deposit < 100000) {
             percent = 0.05f;
         } else if (deposit >= 100000 && deposit <= 300000) {
             percent = 0.07f;
         }
+        float sum = 0;
         sum = (deposit + deposit * percent);
         System.out.println("Начисленный процент: " + percent);
         System.out.println("Итоговая сумма с %: " + sum);
@@ -141,8 +141,6 @@ public class IfElseStatementTheme {
             historyGrade = 3;
         } else if (percentHistory > 73 && percentHistory <= 91) {
             historyGrade = 4;
-        } else {
-            historyGrade = 5;
         }
 
         if (percentProgram <= 60) {
@@ -151,8 +149,6 @@ public class IfElseStatementTheme {
             programGrade = 3;
         } else if (percentProgram > 73 && percentProgram <= 91) {
             programGrade = 4;
-        } else {
-            programGrade = 5;
         }
         System.out.println("Оценка по Истории: " + historyGrade);
         System.out.println("Оценка по Программированию: " + programGrade);
@@ -161,9 +157,9 @@ public class IfElseStatementTheme {
 
         System.out.println("\n8.Расчет прибыли за год");
         int monthRent = 5000;
-        int midSell = 13000;
+        int middleSell = 13000;
         int costPrice = 9000;
-        int income = (midSell - costPrice - monthRent) * 12;
+        int income = (middleSell - costPrice - monthRent) * 12;
         char sign = 0;
         if (income > 0)
             sign = '+';
@@ -174,14 +170,14 @@ public class IfElseStatementTheme {
         int hundredsAtm = 4;
         int tensAtm = 7;
         int onesAtm = 100;
-        int hundredsToIssue = 0;
         int tensToIssue = 0;
         int onesToIssue = 0;
         int sumAtm = hundredsAtm * 100 + tensAtm * 10 + onesAtm;
-        int withdrawMoneyHundreds = withdrawMoney / 100; //5
-        int withdrawMoneyTens = (withdrawMoney % 100) / 10; //6
-        int withdrawMoneyOnes = withdrawMoney % 10; //7
         if (withdrawMoney <= sumAtm && withdrawMoney != 0) {
+            int hundredsToIssue = 0;
+            int withdrawMoneyHundreds = withdrawMoney / 100;
+            int withdrawMoneyTens = (withdrawMoney % 100) / 10;
+            int withdrawMoneyOnes = withdrawMoney % 10;
             if (withdrawMoneyHundreds <= hundredsAtm) {
                 hundredsToIssue = withdrawMoneyHundreds;
             } else {

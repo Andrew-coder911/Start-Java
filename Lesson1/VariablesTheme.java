@@ -3,8 +3,8 @@ public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1.Вывод значение переменных в консоль.\n");
 
-        byte coreAmount = 8;
-        short monitorAmount = 2;
+        byte amountCores = 8;
+        short amountMonitors = 2;
         int ramMBites = 16000;
         long ramBites = 17179869184L;
         float frequencyCpu = 3.6f;
@@ -12,8 +12,8 @@ public class VariablesTheme {
         char nameLetter = 'A';
         boolean working = true;
         
-        System.out.println("Кол-во ядер в моем ПК: " + coreAmount + " шт.");
-        System.out.println("Кол-во мониторов в моем ПК: " + monitorAmount + " шт.");
+        System.out.println("Кол-во ядер в моем ПК: " + amountCores + " шт.");
+        System.out.println("Кол-во мониторов в моем ПК: " + amountMonitors + " шт.");
         System.out.printf("Объем оперативной памяти в Мбит: %d Mbit\n", ramMBites);
         System.out.printf("Тот же объем в байтах: %d bit\n", ramBites);
         System.out.println("Частота процессора моего ПК: " + frequencyCpu + " Hz");
@@ -31,9 +31,11 @@ public class VariablesTheme {
         System.out.printf("Ручка без скидки стоит: %d руб.\n", penPrice);
         System.out.printf("Книга без скидки стоит: %d руб.\n", bookPrice);
         System.out.println("общая стоимость товаров без скидки: " + sum);
-        System.out.println("Скидка составляет: " + String.format("%.0f", discount * 100f) + "%");
-        System.out.println("Общая стоимость товаров со скидкой: " + 
-                String.format("%.0f",(sum * (1 - discount))) + " руб.");
+        discount *= 100f;
+        System.out.printf("Скидка составляет: %.0f ", discount);
+        System.out.println("%");
+        sum *= 1 - (discount / 100);
+        System.out.printf("Общая стоимость товаров со скидкой: %d руб.", sum);
 
         System.out.println("\n3. Вывод слова JAVA\n");
         System.out.println("   J    a  v     v  a   ");
@@ -70,25 +72,25 @@ public class VariablesTheme {
         int num2 = 5;
         
         System.out.println("Способ с помощью третьей переменной.");
-        System.out.printf("Начальные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
+        System.out.printf("Начальные значения.\nПервое: %d\nВторое: %d\n", num1, num2);
         int temp = num1;
         num1 = num2;
         num2 = temp;
-        System.out.printf("Измененные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
+        System.out.printf("Измененные значения.\nПервое: %d\nВторое: %d\n", num1, num2);
 
         System.out.println("Способ с помощью арифметических операций.");
-        System.out.printf("Начальные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
+        System.out.printf("Начальные значения.\nПервое: %d\nВторое: %d\n", num1, num2);
         num1 += num2;
         num2 = num1 - num2;
         num1 -= num2;
-        System.out.printf("Измененные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
+        System.out.printf("Измененные значения.\nПервое: %d\nВторое: %d\n", num1, num2);
 
         System.out.println("Способ с помощью с помощью побитовой операции ^.");
-        System.out.printf("Начальные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
+        System.out.printf("Начальные значения.\nПервое: %d\nВторое: %d\n", num1, num2);
         num1 ^= num2;
-        num2 = num1 ^ num2;
+        num2 ^= num1;
         num1 ^= num2;
-        System.out.printf("Измененные значения.\nПервая: %d\nВторая: %d\n", num1, num2);
+        System.out.printf("Измененные значения.\nПервое: %d\nВторое: %d\n", num1, num2);
 
         System.out.println("\n6.Вывод символов и их кодов\n");
 
@@ -111,10 +113,10 @@ public class VariablesTheme {
         char openBracket = '(';
         char closeBracket = ')';
         
-        System.out.printf("    %c%c    \n", slash, backslash);
-        System.out.printf("   %c  %c   \n", slash, backslash);
-        System.out.printf("  %c%c%c %c%c  \n", slash, underscore, openBracket, closeBracket, backslash);
-        System.out.printf(" %c      %c \n",  slash, backslash);
+        System.out.printf("    %c%c\n", slash, backslash);
+        System.out.printf("   %c  %c\n", slash, backslash);
+        System.out.printf("  %c%c%c %c%c\n", slash, underscore, openBracket, closeBracket, backslash);
+        System.out.printf(" %c      %c\n",  slash, backslash);
         System.out.printf("%c%c%c%c%c", slash,underscore,underscore,underscore,underscore);
         System.out.printf("%c%c%c%c%c\n", slash, backslash, underscore,underscore, backslash);
 
