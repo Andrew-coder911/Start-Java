@@ -21,21 +21,17 @@ class CyclesTheme {
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
-        int max = 0;
-        int min = 0;
-        if (num1 > num2 && num1 > num3) {
-            max = num1;
-        } else if (num2 > num1 && num2 > num3) {
-            max = num2;
-        } else {
-            max = num3;
-        }
-        if (num1 < num2 && num1 < num3) {
-            min = num1;
-        } else if (num2 < num1 && num2 < num3) {
+        int max = num1;
+        int min = num1;
+        if (num2 < min) {
             min = num2;
-        } else {
+        } else if (num2 > max) {
+            max = num2;
+        }
+        if (num3 < min) {
             min = num3;
+        } else if (num3 > max) {
+            max = num3;
         }
         System.out.printf("Числа в интервале (%d, %d) в порядке убывания\n", min, max);
         for (int i = --max; i > min; i--) {
