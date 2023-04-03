@@ -2,23 +2,22 @@ class MyFirstGame {
 
     public static void main(String[] args) {
         System.out.println("\n2.Игра \"Угадай число\"");
-        int compNum = 31;
-        int personNum = 40;
-        boolean correct = true;
-        if (compNum > 0 && compNum <= 100) {
+        int secretNum = 31;
+        int playerNum = 40;
+        if (secretNum > 0 && secretNum <= 100) {
             do {
-                if (personNum > compNum) {
-                    System.out.println("Число " + personNum + " больше того что загадал компьютер");
-                    personNum--;
-                } else if (personNum < compNum) {
-                    System.out.println("Число " + personNum + " меньше того что загадал компьютер");
-                    personNum++;
-                }else if (personNum == compNum) {
-                    System.out.println("Вы победили!");
-                    System.out.println("Компьютер загадал число: " + personNum);
-                    correct = false;
+                if (playerNum > secretNum) {
+                    System.out.println("Число " + playerNum + " больше того что загадал компьютер");
+                    playerNum--;
+                } else if (playerNum < secretNum) {
+                    System.out.println("Число " + playerNum + " меньше того что загадал компьютер");
+                    playerNum++;
+                } else {
+                    break;
                 }
-            } while (correct);
+            } while (true);
         }
+        System.out.println("Вы победили!");
+        System.out.println("Компьютер загадал число: " + playerNum);
     }
 }
