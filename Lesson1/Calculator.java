@@ -4,7 +4,6 @@ class Calculator {
         System.out.println("1. \"Калькулятор\"");
         int num1 = 4;
         int num2 = 0;
-        int extent = num2;
         int result = 0;
         char sign = '^';
         if (sign == '+') {
@@ -17,9 +16,8 @@ class Calculator {
             result = num1 / num2;
         } else if (sign == '^') {
             result = 1;
-            while (extent != 0) {
+            for (int i = 0; i < num2; i++) {
                 result *= num1;
-                extent--;
             }
         } else if (sign == '%') {
             result = num1 % num2;

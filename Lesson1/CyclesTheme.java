@@ -41,9 +41,9 @@ class CyclesTheme {
         System.out.println("\n\n3.Вывод реверсивного числа и суммы его цифр");
         num1 = 1234;
         int sum = 0;
-        while (num1 > 0){
+        while (num1 > 0) {
             int digit = num1 % 10;
-            System.out.println("Исходное число в обратном порядке: " + digit);
+            System.out.println("Исходное число в обратном порядке: " + digit );
             sum += digit;
             num1 /= 10;
         }
@@ -62,8 +62,7 @@ class CyclesTheme {
                 countNumsInLine = 0;
             }
         }
-        int remainNum = 0;
-        remainNum = countLines - countNumsInLine % countLines;
+        int remainNum = countLines - countNumsInLine;
         if (remainNum > 0 && remainNum < 5) {
             for (int i = 0; i < remainNum; i++) {
                 System.out.printf("%3d", 0);
@@ -113,13 +112,13 @@ class CyclesTheme {
         countChars = 1;
         int limiter = 1;
         do {
-            int countCharInLines = 0;
+            int countCharsInLine = 0;
             do {
                 System.out.print("$");
-                countCharInLines++;
-            } while (countCharInLines < countChars);
+                countCharsInLine++;
+            } while (countCharsInLine < countChars);
             System.out.println();
-            if(limiter < 3){
+            if(limiter < 3) {
                 countChars++;
             } else if (limiter >= 3) {
                 countChars--;
@@ -133,28 +132,28 @@ class CyclesTheme {
         for (int i = 0; i <= 127; i++) {
             if (i % 2 != 0 && i <= 47) {
                 if (i == 29) {
-                    System.out.printf("%6d%5c%n", i, (char) i);
+                    System.out.printf("%6d%5c%n", i, i);
                 } else {
-                    System.out.printf("%5d%5c%n", i, (char) i);
+                    System.out.printf("%5d%5c%n", i, i);
                 }
             } else if (i % 2 == 0 && i >= 97 && i <= 122) {
-                System.out.printf("%5d%5c%n", i, (char) i);
+                System.out.printf("%5d%5c%n", i, i);
             }
         }
 
         System.out.println("\n8.Проверка, является ли число палиндромом");
         num1 = 1234321;
-        int copyNum = num1;
-        int polindrom = 0;
+        copyNum1 = num1;
+        int palindrome = 0;
         while (num1 > 0) {
             int digit = num1 % 10;
-            polindrom = polindrom * 10 + digit;
+            palindrome = palindrome * 10 + digit;
             num1 /= 10;
         }
-        if (copyNum == polindrom) {
-            System.out.printf("Число %d является палиндромом\n", copyNum);
+        if (copyNum1 == palindrome) {
+            System.out.printf("Число %d является палиндромом\n", copyNum1);
         } else {
-            System.out.printf("Число %d не является палиндромом\n", copyNum);
+            System.out.printf("Число %d не является палиндромом\n", copyNum1);
         }
 
         System.out.println("\n9.Определение, является ли число счастливым");
@@ -164,10 +163,10 @@ class CyclesTheme {
         int rightHalf = 0;
         int sumLeftHalf = 0;
         int sumRightHalf = 0;
-        while (num1 != 0) {
+        while (num1 > 0) {
             int digit = num1 % 10;
             if (count < 3) {
-                leftHalf = leftHalf * 10 + digit;
+                //leftHalf = leftHalf * 10 + digit;
                 sumLeftHalf += digit;
             } else {
                 rightHalf = rightHalf * 10 + digit;
@@ -185,14 +184,13 @@ class CyclesTheme {
         }
 
         System.out.println("\n10.Вывод таблицы умножения Пифагора");
-        count = 0;
+        //count = 0;
         for (int i = 1; i < 10; i++) {
             if (i == 1) {
                 System.out.print("   ");
             } else if (i == 2) {
-                while (count < 9) {
+                for (int j = 0; j < 9; j++) {
                     System.out.print("___");
-                    count++;
                 }
                 System.out.print("_");
                 System.out.println();

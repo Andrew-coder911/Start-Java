@@ -12,10 +12,8 @@ class MyFirstGame {
                 } else if (playerNum < secretNum) {
                     System.out.println("Число " + playerNum + " меньше того что загадал компьютер");
                     playerNum++;
-                } else {
-                    break;
                 }
-            } while (true);
+            } while (secretNum != playerNum);
         }
         System.out.println("Вы победили!");
         System.out.println("Компьютер загадал число: " + playerNum);
