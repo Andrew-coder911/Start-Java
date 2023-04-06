@@ -192,8 +192,7 @@ class CyclesTheme {
                 for (int j = 0; j < 9; j++) {
                     System.out.print("___");
                 }
-                System.out.print("_");
-                System.out.println();
+                System.out.print("_\n");
             }
             for (int j = 1; j < 10; j++) {
                 if (i * j != 1) {
