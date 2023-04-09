@@ -14,8 +14,8 @@ class MyFirstGame {
                     playerNum++;
                 }
             } while (secretNum != playerNum);
+            System.out.println("Вы победили!");
+            System.out.println("Компьютер загадал число: " + playerNum);
         }
-        System.out.println("Вы победили!");
-        System.out.println("Компьютер загадал число: " + playerNum);
     }
 }

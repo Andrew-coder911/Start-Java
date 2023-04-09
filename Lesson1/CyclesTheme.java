@@ -41,13 +41,14 @@ class CyclesTheme {
         System.out.println("\n\n3.Вывод реверсивного числа и суммы его цифр");
         num1 = 1234;
         int sum = 0;
+        System.out.println("Исходное число в обратном порядке:");
         while (num1 > 0) {
             int digit = num1 % 10;
-            System.out.println("Исходное число в обратном порядке: " + digit );
+            System.out.print(digit);
             sum += digit;
             num1 /= 10;
         }
-        System.out.println("Сумма его цифр: " + sum);
+        System.out.println("\nСумма его цифр: " + sum);
 
         System.out.println("\n4. Вывод чисел на консоль в несколько строк");
         int startRange = 1;
@@ -159,17 +160,15 @@ class CyclesTheme {
         System.out.println("\n9.Определение, является ли число счастливым");
         num1 = 123321;
         int count = 0;
-        int leftHalf = 0;
-        int rightHalf = 0;
+        int leftHalf = num1 / 1000;
+        int rightHalf = num1 % 1000;
         int sumLeftHalf = 0;
         int sumRightHalf = 0;
         while (num1 > 0) {
             int digit = num1 % 10;
             if (count < 3) {
-                //leftHalf = leftHalf * 10 + digit;
                 sumLeftHalf += digit;
             } else {
-                rightHalf = rightHalf * 10 + digit;
                 sumRightHalf += digit;
             }
             count++;
@@ -184,7 +183,6 @@ class CyclesTheme {
         }
 
         System.out.println("\n10.Вывод таблицы умножения Пифагора");
-        //count = 0;
         for (int i = 1; i < 10; i++) {
             if (i == 1) {
                 System.out.print("   ");
@@ -192,7 +190,7 @@ class CyclesTheme {
                 for (int j = 0; j < 9; j++) {
                     System.out.print("___");
                 }
-                System.out.print("_\n");
+                System.out.println("_");
             }
             for (int j = 1; j < 10; j++) {
                 if (i * j != 1) {
