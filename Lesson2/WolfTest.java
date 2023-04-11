@@ -1,24 +1,23 @@
 public class WolfTest {
 
     public static void main(String[] args) {
-        //Wolf makkenaWolf = new Wolf("Самец", "Маккена", "Серый", 30, 18);
         Wolf makkenaWolf = new Wolf();
-        makkenaWolf.male = "Самец";
-        makkenaWolf.nickname = "Маккена";
-        makkenaWolf.color = "Серый";
-        makkenaWolf.weight = 30;
-        makkenaWolf.age = 18;
+        makkenaWolf.setMale("Самец");
+        makkenaWolf.setNickname("Маккена");
+        makkenaWolf.setColor("Серый");
+        makkenaWolf.setWeight(4);
+        makkenaWolf.setAge(7);
 
-        System.out.println("Пол: " + makkenaWolf.male);
-        System.out.println("Кличка: " + makkenaWolf.nickname);
-        System.out.println("Цвет: " + makkenaWolf.color);
-        System.out.println("Вес: " + makkenaWolf.weight + " кг");
-        System.out.println("Возраст: " + makkenaWolf.age + " лет\n");
+        System.out.println("Пол: " + makkenaWolf.getMale());
+        System.out.println("Кличка: " + makkenaWolf.getNickname());
+        System.out.println("Цвет: " + makkenaWolf.getColor());
+        System.out.println("Вес: " + makkenaWolf.getWeight() + " кг");
+        System.out.println("Возраст: " + makkenaWolf.getAge() + " лет\n");
 
-        makkenaWolf.walking();
-        makkenaWolf.sitting();
-        makkenaWolf.running();
-        makkenaWolf.howls();
-        makkenaWolf.hunting();
+        makkenaWolf.walk();
+        makkenaWolf.sit();
+        makkenaWolf.run();
+        makkenaWolf.howl();
+        makkenaWolf.hunt();
     }
 }
