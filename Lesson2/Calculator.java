@@ -3,7 +3,6 @@ class Calculator {
     private int num2;
     private char sign;
     private int result;
-    private String userAnswer;
 
     public void setNum1(int num1) {
         this.num1 = num1;
@@ -29,35 +28,32 @@ class Calculator {
         return sign;
     }
 
-    public void setResult(char sign, int num1, int num2) {
+    public int calculate() {
         switch (sign) {
-        case '+':
-            this.result = num1 + num2;
-            break;
-        case '-':
-            this.result = num1 - num2;
-            break;
-        case '*':
-            this.result = num1 * num2;
-            break;
-        case '/':
-            this.result = num1 / num2;
-            break;
-        case '^':
-            result = 1;
-            for (int i = 0; i < num2; i++) {
-                this.result *= num1;
-            }
-            break;
-        case '%':
-            this.result = num1 % num2;
-            break;
-        default:
-            System.out.println("Введенная математическая операция не поддерживается.");
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            case '^':
+                result = 1;
+                for (int i = 0; i < num2; i++) {
+                    result *= num1;
+                }
+                break;
+            case '%':
+                result = num1 % num2;
+                break;
+            default:
+                System.out.println("Введенная математическая операция не поддерживается.");
         }
-    }
-
-    public int getResult() {
         return result;
     }
 }
