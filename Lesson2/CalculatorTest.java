@@ -4,11 +4,9 @@ class CalculatorTest {
 
     public static void main(String[] args) {
         String userAnswer = "";
-        boolean countinuing;
         Scanner scan = new Scanner(System.in);
         do {
             Calculator calculator = new Calculator();
-            countinuing = false;
 
             System.out.println("Ведите первое число:");
             calculator.setNum1(scan.nextInt());
@@ -26,9 +24,6 @@ class CalculatorTest {
             while (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
                 System.out.println("Некорректный ввод. Введите [yes] или [no]");
                 userAnswer = scan.nextLine();
-            }
-            if (userAnswer.equals("no")) {
-                    break;
             }
         } while (userAnswer.equals("yes"));
     }
