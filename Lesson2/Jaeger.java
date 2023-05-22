@@ -45,11 +45,7 @@ class Jaeger {
         return weapon;
     }
 
-    public void callName() {
-        System.out.println("Мое имя - " + name);
-    }
-
-    public void showStats() {
+    public void printStats() {
         System.out.println("Мои характеристики:");
         System.out.println("Сила: " + strenght);
         System.out.println("Защита: " + armor);

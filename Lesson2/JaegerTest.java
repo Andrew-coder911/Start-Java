@@ -9,8 +9,8 @@ class JaegerTest {
         cayoteTango.setWeapon("Ballistic mortar cannons");
 
         System.out.println("Первый робот:");
-        strikerEureka.callName();
-        strikerEureka.showStats();
+        strikerEureka.getName();
+        strikerEureka.printStats();
         System.out.println("Второй робот:");
         cayoteTango.callName();
         cayoteTango.showStats();
