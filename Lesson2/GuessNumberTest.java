@@ -7,13 +7,19 @@ class GuessNumberTest {
         System.out.println("Введите имя первого игрока.");
         Player player1 = new Player(scan.nextLine());
         System.out.println("Введите имя второго игрока.");
-        scan.nextLine();
         Player player2 = new Player(scan.nextLine());
 
         GuessNumber guessNumber = new GuessNumber(player1, player2);
-        guessNumber.guessPlay();
+        String userAnswer = "";
 
-        // System.out.println("1:" + player1.getName() + " " + player1.getName());
-        // System.out.println("2:" + player2.getName() + " " + player2.getName());
+        do {
+            guessNumber.guessPlay();
+            System.out.println("Хотите продолжить вычисления? [yes/no]:");
+            userAnswer = scan.nextLine();
+            while (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
+                System.out.println("Некорректный ввод. Введите [yes] или [no]");
+                userAnswer = scan.nextLine();
+            }
+        } while (userAnswer.equals("yes"));
     }
 }

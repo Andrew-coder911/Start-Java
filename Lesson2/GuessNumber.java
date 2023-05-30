@@ -11,11 +11,14 @@ class GuessNumber {
     }
 
     public void guessPlay() {
-        Player currentPlayer = player1;
+        Player currentPlayer = player2;
         int secretNumber = GenerateSecretNumber();
         Scanner scan = new Scanner(System.in);
 
         while (currentPlayer.getNumber() != secretNumber) {
+            currentPlayer = player1;
+            player1 = player2;
+            player2 = currentPlayer;
             System.out.println("Игрок: " + currentPlayer.getName() + " загадайте число");
             currentPlayer.setNumber(scan.nextInt());
             System.out.println("Загадал число " + currentPlayer.getNumber());
@@ -29,9 +32,6 @@ class GuessNumber {
             } else {
                 System.out.println("Вы угадали.");
             }
-            currentPlayer = player2;
-            player1 = player2;
-            currentPlayer = player1;
         }
     }
 
