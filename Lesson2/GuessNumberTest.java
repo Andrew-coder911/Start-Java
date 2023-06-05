@@ -9,17 +9,17 @@ class GuessNumberTest {
         System.out.println("Введите имя второго игрока.");
         Player player2 = new Player(scan.nextLine());
 
-        GuessNumber guessNumber = new GuessNumber(player1, player2);
-        String userAnswer = "";
+        GuessNumber game = new GuessNumber(player1, player2);
+        String playerAnswer = "";
 
         do {
-            guessNumber.guessPlay();
+            game.play();
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
-            userAnswer = scan.nextLine();
-            while (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
+            playerAnswer = scan.nextLine();
+            while (!playerAnswer.equals("yes") && !playerAnswer.equals("no")) {
                 System.out.println("Некорректный ввод. Введите [yes] или [no]");
-                userAnswer = scan.nextLine();
+                playerAnswer = scan.nextLine();
             }
-        } while (userAnswer.equals("yes"));
+        } while (playerAnswer.equals("yes"));
     }
 }

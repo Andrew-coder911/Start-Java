@@ -1,9 +1,13 @@
 class Player {
-    String name;
-    int number;
+    private String name;
+    private int number;
 
     public Player(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setNumber(int number) {
@@ -12,9 +16,5 @@ class Player {
 
     public int getNumber() {
         return number;
-    }
-
-    public String getName() {
-        return name;
     }
 }

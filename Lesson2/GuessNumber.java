@@ -10,9 +10,9 @@ class GuessNumber {
         this.player2 = player2;
     }
 
-    public void guessPlay() {
+    public void play() {
         Player currentPlayer = player2;
-        int secretNumber = GenerateSecretNumber();
+        int secretNumber = generateSecretNumber();
         Scanner scan = new Scanner(System.in);
 
         while (currentPlayer.getNumber() != secretNumber) {
@@ -25,19 +25,18 @@ class GuessNumber {
 
             if(currentPlayer.getNumber() > secretNumber) {
                 System.out.println("Число " + currentPlayer.getNumber() + 
-                        "больше того, что загадал компьютер");
+                        " больше того, что загадал компьютер");
             } else if(currentPlayer.getNumber() < secretNumber) {
                 System.out.println("Число " + currentPlayer.getNumber() + 
-                        "меньше того, что загадал компьютер");
+                        " меньше того, что загадал компьютер");
             } else {
                 System.out.println("Вы угадали.");
             }
         }
     }
 
-    public int GenerateSecretNumber() {
+    public int generateSecretNumber() {
         Random random = new Random();
-        int secretNumber = random.nextInt(101);
-        return secretNumber;
+        return random.nextInt(100) + 1;
     }
 }
