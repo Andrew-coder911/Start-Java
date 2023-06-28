@@ -1,3 +1,7 @@
+package com.startjava.lesson_2_3.robot;
+
+import com.startjava.lesson_2_3.robot.Jaeger;
+
 class JaegerTest {
 
     public static void main(String[] args) {
@@ -12,7 +16,7 @@ class JaegerTest {
         strikerEureka.getName();
         strikerEureka.printStats();
         System.out.println("Второй робот:");
-        cayoteTango.callName();
-        cayoteTango.showStats();
+        cayoteTango.getName();
+        cayoteTango.printStats();
     }
 }
