@@ -135,7 +135,7 @@ class CyclesTheme {
         for (int i = 0; i <= 127; i++) {
             if (i % 2 != 0 && i <= 47) {
                 if (i == 29) {
-                    System.out.printf("%6d%5c%n", i, i);
+                    System.out.printf("%5d%5c%n", i, i);
                 } else {
                     System.out.printf("%5d%5c%n", i, i);
                 }
