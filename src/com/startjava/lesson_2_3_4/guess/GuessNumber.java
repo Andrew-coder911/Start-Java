@@ -1,6 +1,5 @@
-package com.startjava.lesson_2_3.guess;
+package com.startjava.lesson_2_3_4.guess;
 
-import com.startjava.lesson_2_3.guess.Player;
 import java.util.Random;
 import java.util.Scanner;
 
