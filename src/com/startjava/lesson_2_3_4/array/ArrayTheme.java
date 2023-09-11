@@ -41,7 +41,7 @@ public class ArrayTheme {
         System.out.println("Число: " + multipliers[length - 1] + " его индекс = " + (length - 1));
     }
 
-    private static  void eraseArray() {
+    private static void eraseArray() {
         System.out.println("\n3. Удаление элементов массива");
         float[] randomNumbers = new float[15];
         int length = randomNumbers.length;
@@ -65,10 +65,10 @@ public class ArrayTheme {
     private static void outputFormat(float[] randomNumbers, int length) {
         for (int i = 0; i < length; i++) {
             if (i <= length / 2) {
-            System.out.printf("%6.3f", randomNumbers[i]);
-            if (i == length / 2) {
-                System.out.println();
-            }
+                System.out.printf("%6.3f", randomNumbers[i]);
+                if (i == length / 2) {
+                    System.out.println();
+                }
             } else {
                 System.out.printf("%6.3f", randomNumbers[i]);
             }
@@ -96,13 +96,21 @@ public class ArrayTheme {
         System.out.print("\n5. Заполнение массива уникальными числами");
         int[] uniqueNumbers = new int[30];
         int length = uniqueNumbers.length;
+        boolean finded = true;
         uniqueNumbers[0] = (int) (60 + Math.random() * 40);
-        for (int i = 0; i < length; i++) {
+        for (int i = 1; i < length; i++) {
+            int uniqueNumber = (int) (60 + Math.random() * 40);
             for (int j = 0; j < i; j++) {
-                while (uniqueNumbers[i] == uniqueNumbers[j]) {
-                    uniqueNumbers[i] = (int) (60 + Math.random() * 40);
-                    j = 0;
+                if (uniqueNumber == uniqueNumbers[j]) {
+                    i--;
+                    finded = false;
+                    break;
+                } else {
+                    finded = true;
                 }
+            }
+            if (finded) {
+                uniqueNumbers[i] = uniqueNumber;
             }
         }
         Arrays.sort(uniqueNumbers);
