@@ -5,22 +5,17 @@ import java.util.Scanner;
 class CalculatorTest {
 
     public static void main(String[] args) {
-        String userAnswer = "";
         Scanner scan = new Scanner(System.in);
+        String userAnswer = "";
         do {
             Calculator calculator = new Calculator();
+            System.out.println("Введите математическое выражение в формате 2 + 2 :");
+            calculator.setUserExpression(scan.nextLine());
+            double result = calculator.calculate();
+            System.out.print(calculator.getNum1() + " " + calculator.getSign() + " " +
+                    calculator.getNum2() + " = ");
+            stringFormat(result);
 
-            System.out.println("Ведите первое число:");
-            calculator.setNum1(scan.nextInt());
-            System.out.println("Введите знак математической операции:");
-            scan.nextLine();
-            calculator.setSign(scan.nextLine().charAt(0));
-            System.out.println("Введите второе число:");
-            calculator.setNum2(scan.nextInt());
-
-            System.out.println(calculator.getNum1() + " " + calculator.getSign() + " " + 
-                    calculator.getNum2() + " = " + calculator.calculate());
-            scan.nextLine();
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
             userAnswer = scan.nextLine();
             while (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
@@ -28,5 +23,14 @@ class CalculatorTest {
                 userAnswer = scan.nextLine();
             }
         } while (userAnswer.equals("yes"));
+    }
+
+    public static void stringFormat(double result) {
+        if (result % (int)result != 0) {
+            System.out.printf("%.3f", result);
+            System.out.println();
+        } else {
+            System.out.println((int)result);
+        }
     }
 }
