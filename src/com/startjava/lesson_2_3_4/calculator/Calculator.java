@@ -45,8 +45,8 @@ class Calculator {
             case '%':
                 return num1 % num2;
             default:
-                System.out.println("Введенная математическая операция не поддерживается.");
+                System.out.println("Ошибка: знак " + sign + " не поддерживается!");
+                return Double.MIN_VALUE;
         }
-        return 0;
     }
 }
