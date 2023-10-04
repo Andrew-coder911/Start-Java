@@ -6,9 +6,9 @@ class Calculator {
 
     public static double calculate(String userExpression) {
         String[] splitString = userExpression.split(" ");
-        num1 = Integer.parseInt(splitString[0]);
-        num2 = Integer.parseInt(splitString[2]);
-        sign = splitString[1].charAt(0);
+        int num1 = Integer.parseInt(splitString[0]);
+        int num2 = Integer.parseInt(splitString[2]);
+        char sign = splitString[1].charAt(0);
         switch (sign) {
             case '+':
                 return num1 + num2;
