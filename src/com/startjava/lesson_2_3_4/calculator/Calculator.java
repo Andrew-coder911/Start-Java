@@ -3,9 +3,6 @@ package com.startjava.lesson_2_3_4.calculator;
 import java.lang.String;
 
 class Calculator {
-    private static int num1;
-    private static int num2;
-    private static char sign;
 
     public static double calculate(String userExpression) {
         String[] splitString = userExpression.split(" ");
